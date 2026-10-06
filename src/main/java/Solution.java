@@ -9,13 +9,16 @@ public class Solution {
 
     public double average(double t1, double t2, double t3, double t4) {
         // remove 0.0 and return your answer
-        double a = t1 + t2 + t3 + t4;
+        double a = (t1 + t2 + t3 + t4)/4;
         return a;
     }
 
     public int roundAverage(double average) {
         // remove 0 and return your answer
-        int roundAverage = Math.round((int)average);
+
+        //90.2 + 0.5 -> 90.7 (int) -> 90
+        //90.5 + 0.5-> 91 (int) -> 91
+        int roundAverage = (int) (average+0.5);
         return roundAverage;
     }
 
@@ -25,8 +28,9 @@ public class Solution {
         if (roundedAverage < 65) {
             isPassing = false;
         }
-        else
+        else{
             isPassing = true;
+        }
         return isPassing;
     }
 
@@ -42,8 +46,8 @@ public class Solution {
 
 
     public int roundValueChange(double totalStock) {
-        // remove 0 and return your answer
-        int roundValueChange = Math.round((int)totalStock);
+        // remove 0 and return your answer  //90.8 -> 91.0 -> 91
+        int roundValueChange = (int)Math.round(totalStock);
         return roundValueChange;
     }
 
@@ -60,28 +64,14 @@ public class Solution {
         */
 
         // remove 0.0 and return your answer
-        int shifted = (int)(userDouble*100);
-       int Dig1 = shifted/10000 + 1;
-        int Dig2 = shifted%10000 + 1;
-        int Dig3 = (shifted%1000)/100 + 1;
-        int Dig4 = (shifted%100)/10 + 1;
-        int Dig5 = shifted%10 + 1;
+        int shifted = (int)(userDouble*100); //123.45 -> 12345
+       int Dig1 = (int)(shifted/10000 + 1)%10;
+        int Dig2 = (int)(shifted%10000/1000 + 1)%10;
+        int Dig3 = (int)(shifted%1000/100 + 1)%10;
+        int Dig4 = (int)(shifted%100/10 + 1)%10;
+        int Dig5 = (shifted%10 + 1)%10;
 
-        if (Dig1 == 10){
-            Dig1 = 0;
-        }
-        if (Dig2 == 10){
-            Dig2 = 0;
-        }
-        if (Dig3 == 10){
-            Dig3 = 0;
-        }
-        if (Dig4 == 10){
-            Dig4 = 0;
-        }
-        if (Dig5 == 10){
-            Dig5 = 0;
-        }
+        
 
         Dig1 = Dig1*100;
         Dig2 = Dig2*10;
@@ -95,7 +85,7 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution s = new Solution();
-        System.out.println(s.adjustDigits(12.90));
+        System.out.println(s.adjustDigits(123.90));
         //23.01
     }
 
