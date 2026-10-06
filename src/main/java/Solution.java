@@ -60,11 +60,12 @@ public class Solution {
         */
 
         // remove 0.0 and return your answer
-       int Dig1 = (int)userDouble + 1;
-        int Dig2 = (int)userDouble  + 1;
-        int Dig3 = (int)userDouble + 1;
-        int Dig4 = (int)userDouble + 1;
-        int Dig5 = (int)userDouble + 1;
+        int shifted = (int)(userDouble*100);
+       int Dig1 = shifted/10000 + 1;
+        int Dig2 = shifted%10000 + 1;
+        int Dig3 = (shifted%1000)/100 + 1;
+        int Dig4 = (shifted%100)/10 + 1;
+        int Dig5 = shifted%10 + 1;
 
         if (Dig1 == 10){
             Dig1 = 0;
@@ -81,8 +82,14 @@ public class Solution {
         if (Dig5 == 10){
             Dig5 = 0;
         }
-        double adjustDigits = (Dig1 + Dig2 + Dig3 + Dig4 + Dig5); */
-        return adjustDigits;
+
+        Dig1 = Dig1*100;
+        Dig2 = Dig2*10;
+        Dig3 = Dig3*1;
+        double Dig4dec = (double)Dig4/10;
+        double Dig5dec = (double)Dig5/100;
+        double newNum= Dig1 + Dig2 + Dig3 + Dig4dec + Dig5dec;
+        return newNum;
 
     }
 

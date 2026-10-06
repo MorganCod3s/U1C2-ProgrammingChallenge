@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: SolutionTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.135 s <<< FAILURE! -- in SolutionTest
-SolutionTest.testProblem2_RoundValueChangePositive -- Time elapsed: 0.049 s <<< FAILURE!
+Tests run: 8, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 0.145 s <<< FAILURE! -- in SolutionTest
+SolutionTest.testProblem2_RoundValueChangePositive -- Time elapsed: 0.044 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <26> but was: <25>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -160,7 +160,7 @@ org.opentest4j.AssertionFailedError: expected: <-15> but was: <-14>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-SolutionTest.testProblem1_Average -- Time elapsed: 0.003 s <<< FAILURE!
+SolutionTest.testProblem1_Average -- Time elapsed: 0.002 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <82.0625> but was: <328.25>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -239,8 +239,8 @@ org.opentest4j.AssertionFailedError: expected: <82.0625> but was: <328.25>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-SolutionTest.testProblem3_AdjustDigits -- Time elapsed: 0.002 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <23.01> but was: <8.0>
+SolutionTest.testProblem3_AdjustDigits -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <23.01> but was: <13013.01>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -318,8 +318,8 @@ org.opentest4j.AssertionFailedError: expected: <23.01> but was: <8.0>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-SolutionTest.testProblem3_AdjustDigitsWrapsNine -- Time elapsed: 0.006 s <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: <56.9> but was: <14.0>
+SolutionTest.testProblem3_AdjustDigitsWrapsNine -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <56.9> but was: <46006.9>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
 	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
@@ -397,7 +397,7 @@ org.opentest4j.AssertionFailedError: expected: <56.9> but was: <14.0>
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-SolutionTest.testProblem1_RoundAverage -- Time elapsed: 0.002 s <<< FAILURE!
+SolutionTest.testProblem1_RoundAverage -- Time elapsed: 0.004 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <90> but was: <89>
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
